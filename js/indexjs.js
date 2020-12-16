@@ -1,14 +1,29 @@
+
+function alertValues(elementParameter) {
+    debugger;
+    console.log(elementParameter.value);
+    console.log(elementParameter.className);
+}
+
 var firstNameId = "first-name";
 var firstNameEl = document.getElementById(firstNameId);
+//alertFirstNameValues();
+alertValues(firstNameEl);
 
 var lastNameId = "last-name";
 var lastNameEl = document.getElementById(lastNameId);
+//alertFirstNameValues();
+alertValues(lastNameEl);
 
-var addressId = "address-name";
+var addressId = "address";
 var addressEl = document.getElementById(addressId);
+//alertaddressValues();
+alertValues(addressEl);
 
 var citiesId = "cities";
 var citiesEl = document.getElementById(citiesId);
+//alertcitiesValues();
+alertValues(citiesEl);
 
 var hobbiesNameId = "hobbies-name";
 var hobbiesNameEl = document.getElementById(hobbiesNameId);
@@ -16,25 +31,21 @@ var hobbiesNameEl = document.getElementById(hobbiesNameId);
 var avatarWrapperId = "avatar-wrapper";
 var avatarWrapperEl = document.getElementById(avatarWrapperId);
 
-debugger;
-
-function alertValue() {
-    console.log(firstNameEl.value);
-    console.log(lastNameEl.value);
-    console.log(addressEl.value); 
-    console.log(citiesEl.value);   
-}
-
-alertValue();
-
-alertValue();
-
-firstNameEl.setAttribute("value", "Andrey");
-// lastNameEl.setAttribute("value", "kamasutra");
+firstNameEl.value="Andrey";
+console.log(firstNameEl.value);
+console.log(firstNameEl.className);
 
 lastNameEl.className = "last-name-input default-input error-input";
+console.log(lastNameEl.value);
+console.log(lastNameEl.className);
 
-alertValue();
+lastNameEl.title="Wrong last name";
+console.log(lastNameEl.value);
+console.log(lastNameEl.className);
+
+firstNameEl.className = 'new-class';
+console.log(firstNameEl.value);
+console.log(firstNameEl.className);
 
 citiesEl.value = "Minsk";
 
